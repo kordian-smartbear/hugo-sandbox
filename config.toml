@@ -28,6 +28,13 @@ theme = "hugo-blog-awesome"
     url = '/about/'
     weight = 30
 
+  [[menu.main]]
+    pageRef="contact"
+    name = 'Contact'
+    url = '/contact/'
+    weight = 30
+
+
 [params]
   sitename = "Awesome hugo blog"
   defaultColor = "dark" # set default color mode: dark or light

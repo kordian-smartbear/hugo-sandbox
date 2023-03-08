@@ -1,0 +1,24 @@
+{{- define "main" -}}
+<div class="wrapper">
+  <form class="form-wrapper" accept-charset="UTF-8" action="" method="POST">
+    <div>
+      <input type="email" name="email" placeholder="Your Email" />
+    </div>
+    <div>
+      <input type="text" name="name" placeholder="Your Name" />
+    </div>
+    <div>
+      <input type="text" name="message" placeholder="Your Message" />
+    </div>
+    <div>
+      <input type="file" name="message" placeholder="single file" />
+    </div>
+    <div>
+      <input type="file" name="message" placeholder="single file" multiple />
+    </div>
+    <div>
+      <button type="submit">Send</button>
+    </div>
+  </form>
+</div>
+{{- end -}}

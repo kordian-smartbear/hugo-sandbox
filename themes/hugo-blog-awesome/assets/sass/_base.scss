@@ -9,7 +9,7 @@
 
 .notransition {
   -webkit-transition: none;
-  -moz-transition: none; 
+  -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
   transition: none;
@@ -235,8 +235,8 @@ blockquote {
   opacity: 0.9;
   border-left: 5px solid $bloquote-border;
   padding: 0 0 0 1rem;
-  margin-left: .3rem;
-  margin-right: .3rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
   font-size: 1em;
 
   > :last-child {
@@ -256,6 +256,31 @@ blockquote {
   padding-left: $spacing-full;
   @extend %clearfix;
 
+  @include media-query($on-mobile) {
+    max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full}));
+    max-width: calc(#{$narrow-size} - (#{$spacing-full}));
+    padding-right: $spacing-full - 10;
+    padding-left: $spacing-full - 10;
+
+    &.blurry {
+      animation: 0.2s ease-in forwards blur;
+      -webkit-animation: 0.2s ease-in forwards blur;
+    }
+  }
+}
+
+.form-wrapper {
+  max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
+  max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-full;
+  padding-left: $spacing-full;
+  display: flex;
+  flex-direction: column;
+
+  @extend %clearfix;
   @include media-query($on-mobile) {
     max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full}));
     max-width: calc(#{$narrow-size} - (#{$spacing-full}));
